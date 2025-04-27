@@ -1,0 +1,134 @@
+{
+  // the aggregate used to define "hide all panels" shortcut
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.toggleBoth",
+      "sequence": [
+        "workbench.action.closePanel",
+        "workbench.action.closeSidebar",
+      ]
+    }
+  ],
+  "update.mode": "none",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "extensions.autoUpdate": false,
+  "update.showReleaseNotes": false,
+  "update.enableWindowsBackgroundUpdates": false,
+  "telemetry.telemetryLevel": "off",
+  "vim.vimrc.enable": true,
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.easymotion": true,
+  "vim.leader": " ",
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-v>": false,
+    "<C-s>": false,
+    "<C-z>": false
+  },
+  "vim.normalModeKeyBindings": [
+    // definitions, jumping in the code
+    { "before": ["g", "p", "d"], "commands": ["editor.action.peekDefinition"] },
+    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["g", "p", "i"], "commands": ["editor.action.peekImplementation"] },
+    { "before": ["g", "q"], "commands": ["editor.action.quickFix"] },
+    { "before": ["g", "r"], "commands": ["editor.action.referenceSearch.trigger"] },
+    { "before": ["g", "t"], "commands": ["editor.action.goToTypeDefinition"] },
+    { "before": ["g", "p", "t"], "commands": ["editor.action.peekTypeDefinition"] },
+    // folding
+    { "before": ["z", "c"], "commands": ["editor.fold"] },
+    { "before": ["z", "o"], "commands": ["editor.unfold"] },
+    { "before": ["<leader>", "z", "c"], "commands": ["editor.foldAll"] },
+    { "before": ["<leader>", "z", "o"], "commands": ["editor.unfoldAll"] },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // tabs 
+    { "before": ["<tab>"], "commands": ["workbench.action.previousEditorInGroup"] },
+    { "before": ["<shift+tab>"], "commands": ["workbench.action.nextEditorInGroup"] },
+    { "before": ["<leader>", "q"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "a"], "commands": ["workbench.action.closeEditorsInGroup"] },
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+    // file tree
+    { "before": ["leader", "e"], "commands": ["workbench.view.explorer"] },
+    // nice to have
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "x"], "commands": ["multiCommand.toggleBoth"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["leader", "h"], "commands": ["editor.action.triggerParameterHints"] },
+    { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
+    { "before": ["<leader>", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["<leader>", "/"], "commands": [":noh"] },
+    { "before": ["leader", "r"], "commands": ["editor.action.refactor"] },
+    { "before": ["leader", "R"], "commands": ["editor.action.rename"] },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["leader", "r"], "commands": ["editor.action.refactor"] },
+    { "before": ["leader", "R"], "commands": ["editor.action.rename"] },
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#000"],
+  "vim.statusBarColors.insert": ["#BF616A", "#000"],
+  "vim.statusBarColors.visual": ["#B48EAD", "#000"],
+  "vim.statusBarColors.visualline": ["#B48EAD", "#000"],
+  "vim.statusBarColors.visualblock": ["#A3BE8C", "#000"],
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+
+  "editor.lineNumbers": "relative",
+  "editor.rulers": [80],
+  "files.autoSave": "afterDelay",
+  "workbench.tree.indent": 16,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#000",
+    "statusBar.debuggingForeground": "#000"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[go]": {
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "terminal.integrated.profiles.windows": {
+    "GitBash": {
+      "source": "Git Bash",
+      "path": ["C:\\Program Files\\Git\\bin\\bash.exe"],
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+  "git.confirmSync": false
+}
