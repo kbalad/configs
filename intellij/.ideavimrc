@@ -88,7 +88,8 @@ nnoremap <leader>o :action OptimizeImports<CR>
 nnoremap <leader>l :action RecentLocations<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
-nnoremap <leader>b :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>b :action ToggleBookmark<CR>
+nnoremap <leader>bm :action ToggleBookmarkWithMnemonic<CR>
 nnoremap <leader>g :action Generate<CR>
 
 """ Searching and Source Code Navigation
