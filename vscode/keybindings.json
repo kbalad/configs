@@ -152,6 +152,11 @@
       "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
     },
     {
+      "key": "e",
+      "command": "explorer.openAndPassFocus",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
       "key": "ctrl+p",
       "command": "-workbench.action.quickOpen"
     },
