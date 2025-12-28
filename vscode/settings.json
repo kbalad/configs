@@ -1,14 +1,4 @@
 {
-  // the aggregate used to define "hide all panels" shortcut
-  "multiCommand.commands": [
-    {
-      "command": "multiCommand.toggleBoth",
-      "sequence": [
-        "workbench.action.closePanel",
-        "workbench.action.closeSidebar",
-      ]
-    }
-  ],
   "update.mode": "none",
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
@@ -59,7 +49,7 @@
     // nice to have
     { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-    { "before": ["leader", "x"], "commands": ["multiCommand.toggleBoth"] },
+    { "before": ["leader", "x"], "commands": ["workbench.action.closePanel","workbench.action.closeSidebar"] },    
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
     { "before": ["leader", "h"], "commands": ["editor.action.triggerParameterHints"] },
     { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] },
